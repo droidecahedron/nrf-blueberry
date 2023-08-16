@@ -17,7 +17,7 @@ Edge impulse trained and deployed model running on Nordic device (zephyr environ
 
 ![image](https://github.com/droidecahedron/nrf-blueberry/assets/63935881/41386a84-ff62-40e3-94d7-342d439fda71)
 
-_(Example running static classification with raw features from my test set after training with my training set)_
+_(Example running static classification with raw features from my test set after training with my training set. You can grab this from the static_classification branch, and it should build out of the box.)_
 
 You can deploy your model as a C++ library, and work it into the boilerplate project listed in resources.
 
