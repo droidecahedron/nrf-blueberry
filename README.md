@@ -25,6 +25,8 @@ You can deploy your model as a C++ library, and work it into the boilerplate pro
 > As of Aug 16, 2023 it puts my board into a boot loop.)
 
 ## resources used
+Initial guide: https://docs.edgeimpulse.com/docs/tutorials/responding-to-your-voice
+
 Overlays taken from: https://github.com/NordicPlayground/nRF-Beehavior-Firmware/tree/master/Legacy_Modules/ei_sample
 
 Boilerplate project taken from: https://github.com/edgeimpulse/example-standalone-inferencing-zephyr
