@@ -3,6 +3,8 @@
 #include "edge-impulse-sdk/dsp/numpy.hpp"
 #include <nrfx_clock.h>
 
+#include "inc/mic.h"
+
 #define FEATURE_BUFSEL_PING 1
 #define FEATURE_BUFSEL_PONG 2
 

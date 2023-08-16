@@ -1,9 +1,9 @@
 #include <zephyr/kernel.h>
 #include <ei_wrapper.h>
-#include <logging/log.h>
+#include <zephyr/logging/log.h>
 #include <string.h>
-#include <drivers/gpio.h>
-#include <audio/dmic.h>
+#include <zephyr/drivers/gpio.h>
+#include <zephyr/audio/dmic.h>
 #define MAX_SAMPLE_RATE  16000
 
 #define SAMPLE_BIT_WIDTH 16
