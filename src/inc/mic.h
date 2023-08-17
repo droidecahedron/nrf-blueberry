@@ -22,6 +22,7 @@
 #define BLOCK_COUNT      4
 
 K_MEM_SLAB_DEFINE_STATIC(mem_slab, MAX_BLOCK_SIZE, BLOCK_COUNT, 4);
-float audio[16000];
+float audio_buf[16000];
+float * const audio_buf_ptr = audio_buf;
 
 const struct device *gpio_dev;
