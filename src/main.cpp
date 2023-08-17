@@ -45,7 +45,7 @@ static void result_ready_cb(int err)
 		}
 		if(inx == 2){
 
-			LOG_INF("Woodpecker probabilaty: %f", value);
+			LOG_INF("blueberry probabilaty: %f", value);
 			break;
             
 		}
