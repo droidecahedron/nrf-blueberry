@@ -1,9 +1,13 @@
+
+#include "inc/mic.h"
+
+//Old stuff from static classification
+/*
 #include <zephyr/kernel.h>
 #include "edge-impulse-sdk/classifier/ei_run_classifier.h"
 #include "edge-impulse-sdk/dsp/numpy.hpp"
 #include <nrfx_clock.h>
-
-#include "inc/mic.h"
+*/
 
 #define FEATURE_BUFSEL_PING 1
 #define FEATURE_BUFSEL_PONG 2
@@ -121,7 +125,7 @@ static int do_pdm_transfer(const struct device *dmic_dev,
 }
 
 
-void main()
+int main()
 {
 	int ret;
 	ret = ei_wrapper_init(result_ready_cb);
@@ -135,7 +139,7 @@ void main()
 	LOG_INF("DMIC module");
 	if (!device_is_ready(dmic_dev)) {
 		LOG_ERR("%s is not ready", dmic_dev->name);
-		return;
+		return -1;
 	}
 
 	/* Configuration of the microphone. */
@@ -178,7 +182,7 @@ void main()
 
 	ret = dmic_configure(dmic_dev, &cfg);
 	if (ret < 0) {
-		return;
+		return -2;
 	}
 
 
@@ -186,10 +190,10 @@ void main()
  
 
 			ret = do_pdm_transfer(dmic_dev, &cfg, 2 * BLOCK_COUNT); // ei classification happens in here
-			if (ret < 0) {
-				return;
-			k_sleep(K_SECONDS(15));
-		 }
+			if (ret < 0) 
+            {
+				return -3;
+		    }
 			k_sleep(K_SECONDS(1));
 	}
 }
