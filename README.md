@@ -73,3 +73,7 @@ Continuous audio classification: https://docs.edgeimpulse.com/docs/tutorials/con
 			psels = <NRF_PSEL(PDM_CLK, 1, 5)>,
 				<NRF_PSEL(PDM_DIN, 1, 6)>;
 ```
+
+
+# Impulse design blocks
+![image](https://github.com/droidecahedron/nrf-blueberry/assets/63935881/0a1a8ba8-1993-4ab2-9116-dedae96d9582)
