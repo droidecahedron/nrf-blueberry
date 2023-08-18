@@ -1,9 +1,9 @@
 #include <zephyr/kernel.h>
 #include <ei_wrapper.h>
-#include <logging/log.h>
+#include <zephyr/logging/log.h>
 #include <string.h>
-#include <drivers/gpio.h>
-#include <audio/dmic.h>
+#include <zephyr/drivers/gpio.h>
+#include <zephyr/audio/dmic.h>
 #define MAX_SAMPLE_RATE  16000
 
 #define SAMPLE_BIT_WIDTH 16
@@ -22,6 +22,7 @@
 #define BLOCK_COUNT      4
 
 K_MEM_SLAB_DEFINE_STATIC(mem_slab, MAX_BLOCK_SIZE, BLOCK_COUNT, 4);
-float audio[16000];
+float audio_buf[16000];
+float * const audio_buf_ptr = audio_buf;
 
 const struct device *gpio_dev;
