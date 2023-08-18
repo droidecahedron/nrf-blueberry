@@ -23,8 +23,8 @@ static void result_ready_cb(int err)
 			break;
 		}
 		if(inx == 2){
-
-			LOG_INF("blueberry probabilaty: %f", value);
+			//! You can use if(value>0.9) or whatever threshhold you care for to action based on a high confidence.
+			LOG_INF("blueberry probability: %f", value); 
 			break;
             
 		}
