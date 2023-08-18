@@ -19,6 +19,10 @@ Edge impulse trained and deployed model running on Nordic device (zephyr environ
 
 _(Example running static classification with raw features from my test set after training with my training set. You can grab this from the static_classification branch, and it should build out of the box.)_
 
+### Example running with mic data, and I say blueberry
+![image](https://github.com/droidecahedron/nrf-blueberry/assets/63935881/0bb2cd25-cc62-4bae-b91d-77560a41f891)
+
+
 You can deploy your model as a C++ library, and work it into the boilerplate project listed in resources.
 
 > (It may be tempting to just get the binary deployment for nrf5340DK + X-NUCLEO-IKS02A1.
